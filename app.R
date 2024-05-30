@@ -34,6 +34,7 @@ server <- function(input, output) {
     df <- read.csv(input$file$datapath,
                    header = input$header,
                    stringsAsFactors = input$stringAsFactors)
+    save(df, file = paste0("./testing.rdata"))
     return(df)
   })
   
